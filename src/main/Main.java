@@ -15,7 +15,7 @@ public class Main {
 		Buffer bf = new Buffer(6, 3);
 		
 		clientes = new ArrayList<>();
-		for(int i=0; i<3; i++) {
+		for(int i=0; i<1; i++) {
 			Cliente actual=new Cliente(3, bf);
 			actual.start();
 			clientes.add(actual);
@@ -25,10 +25,11 @@ public class Main {
 		
 		s1.start();
 		s2.start();
-		
-		for(Cliente c : clientes) {
-			System.out.println(c.arraySize()+ " I: " + clientes.indexOf(c));
-		}
+		while(true) {
+			for(Cliente c : clientes) {
+				//System.out.println(c.arraySize()+ " I: " + clientes.indexOf(c));
+			}
+		}	
 	}
 
 }
