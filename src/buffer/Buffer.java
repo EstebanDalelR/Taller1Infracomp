@@ -10,6 +10,7 @@ public class Buffer {
 	{
 		if(capacidad>nMensajes)
 		{
+			notify();
 			listaMensaje[nMensajes] = m;
 			nMensajes++;
 			return true;
@@ -18,7 +19,13 @@ public class Buffer {
 	}
 	public synchronized Mensaje atender()
 	{
-		if(listaMensaje.length==0) return null;
+		if(listaMensaje.length==0) {
+			try {
+				wait();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
 		Mensaje men = listaMensaje[0];
 		arreglarArreglo(listaMensaje);
 		nMensajes--;
@@ -27,6 +34,7 @@ public class Buffer {
 	
 	public Buffer(int ncapacidad) 
 	{
+		capacidad=ncapacidad;
 		listaMensaje = new Mensaje[capacidad];
 		nMensajes = 0;
 	}
