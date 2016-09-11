@@ -1,15 +1,19 @@
 package cliente;
 
+import java.util.ArrayList;
+
+import buffer.*;
+
 public class Cliente extends Thread {
 
 	public Mensaje mensajexdxd;
 	public Buffer bofer;
-	private arrayList mensajesProcesados; 
+	private ArrayList mensajesProcesados; 
 
 	public boolean dejarMensaje(Mensaje mensajexdxd){
 
 		if (bofer.recibir(mensajexdxd)) {
-			wait();
+			mensajexdxd.dormir();
 			mensajesProcesados.add(mensajexdxd);
 		}	
 		else{

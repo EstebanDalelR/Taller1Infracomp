@@ -9,7 +9,11 @@ public class Mensaje
 	}
 	public void dormir()
 	{
-		wait();
+		try {
+			wait();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 	}
 	public void actualizarInfo(int info)
 	{
