@@ -11,7 +11,7 @@ public class Cliente extends Thread {
 	private ArrayList mensajesProcesados; 
 	private long solicitudes;
 	
-	public Cliente(int numSolicitudes) {
+	public Cliente(long numSolicitudes) {
 		solicitudes=numSolicitudes;
 	}
 
