@@ -6,7 +6,6 @@ import buffer.*;
 
 public class Cliente extends Thread {
 
-	public Mensaje mensajexdxd;
 	public Buffer bofer;
 	private ArrayList<Mensaje> mensajesProcesados; 
 	private long solicitudes;
