@@ -1,5 +1,7 @@
 package buffer;
 
+import cliente.Cliente;
+
 public class Buffer {
 
 	
@@ -9,13 +11,14 @@ public class Buffer {
 	private boolean lleno;
 	private Mensaje [] listaMensaje;
 
-	public synchronized boolean recibir(Mensaje m)
+	public synchronized boolean recibir(Mensaje m, Cliente cl)
 	{
 		if(capacidad>nMensajes)
 		{
 			listaMensaje[nMensajes] = m;
 			nMensajes++;
 			notify();
+			cl.getMessage().dormir();
 			return true;
 		}
 		else return false;

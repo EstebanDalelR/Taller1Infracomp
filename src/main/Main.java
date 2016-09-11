@@ -43,6 +43,7 @@ public class Main {
 		Buffer bf = new Buffer(capBuffer, numClientes);
 		
 		clientes = new ArrayList<>();
+		servidores = new ArrayList<>();
 		for(int i=0; i<numClientes; i++) {
 			Cliente actual=new Cliente(numMensajes, bf);
 			actual.start();
