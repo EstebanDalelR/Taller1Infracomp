@@ -10,9 +10,9 @@ public class Buffer {
 	{
 		if(capacidad>nMensajes)
 		{
-			notify();
 			listaMensaje[nMensajes] = m;
 			nMensajes++;
+			notify();
 			return true;
 		}
 		else return false;
