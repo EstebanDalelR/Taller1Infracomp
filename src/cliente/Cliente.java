@@ -22,9 +22,6 @@ public class Cliente extends Thread {
 				dejarMensaje(mensajexdxd);
 			}
 		}
-	}
-
-
 
 
 
