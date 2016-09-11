@@ -54,11 +54,7 @@ public class Main {
 			actual.start();
 			servidores.add(actual);
 		}
-		while(true) {
-			for(Cliente c : clientes) {
-				//System.out.println(c.arraySize()+ " I: " + clientes.indexOf(c));
-			}
-		}	
+		System.out.println(clientes.size());
 	}
 
 }

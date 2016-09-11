@@ -7,7 +7,7 @@ public class Mensaje
 	{
 		msj = msjn;
 	}
-	public void dormir()
+	public synchronized void dormir()
 	{
 		try {
 			wait();
@@ -19,7 +19,7 @@ public class Mensaje
 	{
 		msj = info;
 	}
-	public void despertar()
+	public synchronized void despertar()
 	{
 		notify();
 	}
