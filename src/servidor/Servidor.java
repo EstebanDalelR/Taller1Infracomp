@@ -19,8 +19,12 @@ public class Servidor extends Thread {
 	}
 	
 	public void procesar(Mensaje msn) {
-		msn.actualizarInfo(msn.darInfo()++);
-		sleep(20);
+		msn.actualizarInfo(msn.darMensaje()+1);
+		try {
+			sleep(20);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		msn.despertar();
 	}
 }

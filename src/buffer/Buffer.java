@@ -26,7 +26,7 @@ public class Buffer {
 	
 	public Buffer(int ncapacidad) 
 	{
-		mensaje = new Mensaje[capacidad];
+		listaMensaje = new Mensaje[capacidad];
 		nMensajes = 0;
 	}
 

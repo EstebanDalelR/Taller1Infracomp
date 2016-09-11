@@ -15,13 +15,16 @@ public class Mensaje
 			e.printStackTrace();
 		}
 	}
-	public void actualizarInfo(int info)
+	public void actualizarInfo(long info)
 	{
 		msj = info;
 	}
 	public void despertar()
 	{
 		notify();
+	}
+	public long darMensaje() {
+		return msj;
 	}
 	
 }
