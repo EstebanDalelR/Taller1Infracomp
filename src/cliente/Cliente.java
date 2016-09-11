@@ -8,19 +8,11 @@ public class Cliente extends Thread {
 
 	public boolean dejarMensaje(Mensaje mensajexdxd){
 
-		if (bofer.recibir(mensajexdxd)) {
-			wait();
-			mensajesProcesados.add(mensajexdxd);
-		}	
-		else{
 			while(!bofer.recibir(mensajexdxd))
 			{
 				dejarMensaje(mensajexdxd);
 			}
 		}
-	}
-
-
 
 
 
