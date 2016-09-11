@@ -17,7 +17,7 @@ public class Cliente extends Thread {
 
 	public void dejarMensaje(Mensaje mensajexdxd){
 
-			while(!bofer.recibir(mensajexdxd));
+			while(!bofer.recibir(mensajexdxd))yield();
 			mensajexdxd.dormir();
 			mensajesProcesados.add(mensajexdxd);
 			solicitudes--;
