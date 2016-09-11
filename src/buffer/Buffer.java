@@ -18,6 +18,7 @@ public class Buffer {
 	}
 	public synchronized Mensaje atender()
 	{
+		if(listaMensaje.length==0) return null;
 		Mensaje men = listaMensaje[0];
 		arreglarArreglo(listaMensaje);
 		nMensajes--;
@@ -33,7 +34,7 @@ public class Buffer {
 	public void arreglarArreglo(Mensaje [] mensa)
 	{
 		mensa[0]=null;
-		for(int i=0; i<mensa.length;i++)
+		for(int i=0; i<mensa.length-1;i++)
 		{
 			mensa[i]=mensa[i+1]; 			
 		}
