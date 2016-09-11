@@ -2,10 +2,13 @@ package buffer;
 
 public class Buffer {
 
-	public int capacidad;
-	public int nMensajes;
-	public boolean lleno;
-	public Mensaje [] listaMensaje;
+	
+	private int numClientes;
+	private int capacidad;
+	private int nMensajes;
+	private boolean lleno;
+	private Mensaje [] listaMensaje;
+
 	public synchronized boolean recibir(Mensaje m)
 	{
 		if(capacidad>nMensajes)
@@ -32,8 +35,9 @@ public class Buffer {
 		return men;
 	} 
 	
-	public Buffer(int ncapacidad) 
+	public Buffer(int ncapacidad, int numClientes) 
 	{
+		this.numClientes=numClientes;
 		capacidad=ncapacidad;
 		listaMensaje = new Mensaje[capacidad];
 		nMensajes = 0;

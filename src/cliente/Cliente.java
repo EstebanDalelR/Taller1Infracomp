@@ -8,11 +8,13 @@ public class Cliente extends Thread {
 
 	public Mensaje mensajexdxd;
 	public Buffer bofer;
-	private ArrayList mensajesProcesados; 
+	private ArrayList<Mensaje> mensajesProcesados; 
 	private long solicitudes;
 	
-	public Cliente(long numSolicitudes) {
+	public Cliente(long numSolicitudes, Buffer bf) {
 		solicitudes=numSolicitudes;
+		mensajesProcesados=new ArrayList<>();
+		bofer=bf;
 	}
 
 	public void dejarMensaje(Mensaje mensajexdxd){
@@ -27,5 +29,9 @@ public class Cliente extends Thread {
 		while(solicitudes>0) {
 			dejarMensaje(new Mensaje(solicitudes));
 		}
+	}
+	
+	public int arraySize() {
+		return mensajesProcesados.size();
 	}
 }
