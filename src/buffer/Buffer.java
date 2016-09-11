@@ -5,16 +5,38 @@ public class Buffer {
 	public int capacidad;
 	public int nMensajes;
 	public boolean lleno;
-	public [] mensaje;
-	public boolean synchronized estoyLleno()
+	public Mensaje [] listaMensaje;
+	public synchronized boolean recibir(Mensaje m)
 	{
-		if()
+		if(capacidad>nMensajes)
+		{
+			listaMensaje[nMensajes] = m;
+			nMensajes++;
+			return true;
+		}
+		else return false;
 	}
-	if buffer is full  
+	public synchronized Mensaje atender()
+	{
+		Mensaje men = listaMensaje[0];
+		arreglarArreglo(listaMensaje);
+		nMensajes--;
+		return men;
+	} 
 	
-	public Buffer(int capacidadn, boolean llenon, {
-		capacidad = ncapacidad;
+	public Buffer(int ncapacidad) 
+	{
+		mensaje = new Mensaje[capacidad];
+		nMensajes = 0;
+	}
 
+	public void arreglarArreglo(Mensaje [] mensa)
+	{
+		mensa[0]=null;
+		for(int i=0; i<mensa.length;i++)
+		{
+			mensa[i]=mensa[i+1]; 			
+		}
 	}
 
 }
