@@ -1,3 +1,7 @@
+
+//Juan Pablo Arévalo									201211889
+//Esteban Dalel										201227078
+//Diego Tovar										201512531
 package cliente;
 
 import java.util.ArrayList;
@@ -27,6 +31,7 @@ public class Cliente extends Thread {
 	public void run() {
 		while(solicitudes>0) {
 			dejarMensaje(new Mensaje(solicitudes));
+			System.out.println("dejo una solicitud");
 		}
 	}
 	

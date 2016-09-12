@@ -1,3 +1,6 @@
+//Juan Pablo Arévalo									201211889
+//Esteban Dalel										201227078
+//Diego Tovar										201512531
 package buffer;
 
 import cliente.Cliente;
@@ -13,7 +16,7 @@ public class Buffer {
 
 	public synchronized boolean recibir(Mensaje m, Cliente cl)
 	{
-		System.out.println("entrÃ© recibir"); 
+		System.out.println("entra recibir"); 
 		if(capacidad>nMensajes)
 		{
 			listaMensaje[nMensajes] = m;

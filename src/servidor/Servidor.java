@@ -1,5 +1,9 @@
 package servidor;
 import buffer.*;
+//Juan Pablo Arévalo								201211889
+//Esteban Dalel										201227078
+//Diego Tovar										201512531
+
 public class Servidor extends Thread {
 
 	private Buffer bf;
