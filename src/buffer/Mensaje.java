@@ -21,7 +21,7 @@ public class Mensaje
 	}
 	public synchronized void despertar()
 	{
-		notify();
+		notifyAll();
 	}
 	public long darMensaje() {
 		return msj;

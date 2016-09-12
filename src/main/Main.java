@@ -54,7 +54,8 @@ public class Main {
 			actual.start();
 			servidores.add(actual);
 		}
-		System.out.println(clientes.size());
+		//while(true)
+		System.out.println(clientes.get(0).arraySize());
 	}
 
 }

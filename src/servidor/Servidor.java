@@ -11,7 +11,7 @@ public class Servidor extends Thread {
 	public void run() {
 		while(true) {
 			Mensaje msn = null;
-			do {
+			do {	
 				msn = bf.atender();
 			}while(msn==null);
 			procesar(msn);
@@ -25,6 +25,7 @@ public class Servidor extends Thread {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
+		System.out.println("Recibido en Buffer SERVIDO\n");
 		msn.despertar();
 	}
 }
