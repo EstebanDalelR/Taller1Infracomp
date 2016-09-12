@@ -1,5 +1,5 @@
 
-//Juan Pablo Arévalo									201211889
+//Juan Pablo Arévalo								201211889
 //Esteban Dalel										201227078
 //Diego Tovar										201512531
 package cliente;
