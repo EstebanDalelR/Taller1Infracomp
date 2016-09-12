@@ -1,3 +1,6 @@
+//Juan Pablo Ar�valo									201211889
+//Esteban Dalel										201227078
+//Diego Tovar										201512531
 package buffer;
 
 import cliente.Cliente;
@@ -31,9 +34,8 @@ public class Buffer {
 	 * @return true si pudo almacenar el mensaje, false de lo contrario
 	 */
 	public synchronized boolean recibir(Mensaje m, Cliente cl)
-	{
-		System.out.println("entré recibir"); 
-		
+	{		
+		System.out.println("entra recibir"); 
 		//revisa si la capacidad actual me permite almacenar un mensaje
 		if(capacidad>nMensajes)
 		{
